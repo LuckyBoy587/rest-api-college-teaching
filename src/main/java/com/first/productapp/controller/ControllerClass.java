@@ -13,6 +13,11 @@ public class ControllerClass {
         this.serviceClass = serviceClass;
     }
 
+    @GetMapping("/fetchdata")
+    public Pojo fetchData() {
+        return new Pojo("Kowshik", 108, 18);
+    }
+
     @GetMapping("/details")
     public Pojo details() {
         return serviceClass.fetchPOJODetails();
